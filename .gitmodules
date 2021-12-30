@@ -1,0 +1,3 @@
+[submodule "deps/7seg"]
+	path = deps/7seg
+	url = git@github.com:xjanu/ard-7seg.git
