@@ -1,5 +1,8 @@
 /*
 !/.gitignore
 !/main.ino
+!/CMakeLists.txt
 
+!/.vscode/
 !/deps/
+!/Arduino-CMake-Toolchain/

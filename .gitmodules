@@ -1,3 +1,6 @@
 [submodule "deps/7seg"]
 	path = deps/7seg
 	url = git@github.com:xjanu/ard-7seg.git
+[submodule "Arduino-CMake-Toolchain"]
+	path = Arduino-CMake-Toolchain
+	url = https://github.com/a9183756-gh/Arduino-CMake-Toolchain.git

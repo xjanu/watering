@@ -1,0 +1,11 @@
+{
+    "cmake.generator": "Unix Makefiles",
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "/home/xjanu/code/arduino/watering/Arduino-CMake-Toolchain/Arduino-toolchain.cmake",
+        "ARDUINO_BOARD_OPTIONS_FILE": "/home/xjanu/code/arduino/watering/BoardOptions.cmake"
+    },
+    "cmake.buildToolArgs": [
+        "SERIAL_PORT=/dev/ttyACM0"
+    ],
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
