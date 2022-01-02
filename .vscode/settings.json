@@ -7,5 +7,6 @@
     "cmake.buildToolArgs": [
         "SERIAL_PORT=/dev/ttyACM0"
     ],
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.configureOnOpen": true
 }
