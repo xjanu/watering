@@ -2,6 +2,7 @@
 !/.gitignore
 !/main.ino
 !/CMakeLists.txt
+!/BoardOptions.cmake
 
 !/.vscode/
 !/deps/
