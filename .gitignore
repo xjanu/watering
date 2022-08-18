@@ -1,10 +1,10 @@
 /*
 !/.gitignore
-!/main.ino
 !/CMakeLists.txt
 !/BoardOptions.cmake
 
 !/.vscode/
 !/deps/
 !/Arduino-CMake-Toolchain/
+!/src/
 !/include/
