@@ -1,6 +1,6 @@
 #include "Arduino.h"
-#include "deps/7seg/7seg.h"
-#include "include/pins.hpp"
+#include "7seg.h"
+#include "pins.hpp"
 
 int moist;
 
