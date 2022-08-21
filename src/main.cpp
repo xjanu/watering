@@ -10,6 +10,13 @@ SegmentDisplay display{CATHODE, PINS_SEGMENT, PINS_DIGIT[0],
 void setup() {
     display.set_freq(DISPLAY_FREQ);
     moist = analogRead(PIN_MOIST);
+
+    pinMode(PIN_PUMP, OUTPUT);
+    pinMode(PIN_POT_PWR, OUTPUT);
+    pinMode(PIN_BUTTON, INPUT_PULLUP);
+
+    digitalWrite(PIN_PUMP, LOW);
+    digitalWrite(PIN_POT_PWR, LOW);
 }
 
 void loop() {
