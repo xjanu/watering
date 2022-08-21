@@ -12,7 +12,9 @@ void setup() {
     display.set_freq(DISPLAY_FREQ);
     moist = read_moist();
 
+    pinMode(PIN_MOIST, INPUT);
     pinMode(PIN_PUMP, OUTPUT);
+    pinMode(PIN_POT_SENSE, INPUT);
     pinMode(PIN_POT_PWR, OUTPUT);
     pinMode(PIN_BUTTON, INPUT_PULLUP);
 
