@@ -4,17 +4,17 @@
 
 int moist;
 
-SegmentDisplay display{CATHODE, segment_pins, digit_pins[0],
-                       digit_pins[1], digit_pins[2], digit_pins[3]};
+SegmentDisplay display{CATHODE, PINS_SEGMENT, PINS_DIGIT[0],
+                       PINS_DIGIT[1], PINS_DIGIT[2], PINS_DIGIT[3]};
 
 void setup() {
-    display.set_freq(display_freq);
-    moist = analogRead(moist_sensor_pin);
+    display.set_freq(DISPLAY_FREQ);
+    moist = analogRead(PIN_MOIST);
 }
 
 void loop() {
     if (millis() % 500 == 0) {
-        moist = (moist + analogRead(moist_sensor_pin)) / 2;
+        moist = (moist + analogRead(PIN_MOIST)) / 2;
     }
     display.write_num(moist % 10000);
     display.refresh();
