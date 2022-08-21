@@ -2,7 +2,13 @@ cmake_minimum_required(VERSION 3.0.0)
 
 project(water CXX)
 
-add_executable(water src/main.cpp deps/7seg/7seg.cpp)
+list(APPEND WATER_SOURCES
+    "src/main.cpp"
+    "src/sense.cpp"
+    "deps/7seg/7seg.cpp"
+)
+
+add_executable(water ${WATER_SOURCES})
 
 # Arduino.h is included in hello_world.cpp, so link with Arduino core
 target_link_arduino_libraries(water PRIVATE core)
