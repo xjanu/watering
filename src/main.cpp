@@ -2,13 +2,16 @@
 #include "7seg.h"
 #include "constants.hpp"
 #include "sense.hpp"
+#include "moist.hpp"
 
 int moist;
+int moist_limit;
 
 SegmentDisplay display{CATHODE, PINS_SEGMENT, PINS_DIGIT[0],
                        PINS_DIGIT[1], PINS_DIGIT[2], PINS_DIGIT[3]};
 
-void setup() {
+void setup()
+{
     display.set_freq(DISPLAY_FREQ);
     moist = read_moist();
 
@@ -22,10 +25,21 @@ void setup() {
     digitalWrite(PIN_POT_PWR,  LOW);
 }
 
-void loop() {
-    if (millis() % 500 == 0) {
-        moist = (moist + read_moist()) / 2;
+void loop()
+{
+    if (read_button()) {
+        show_moist(BUTTON_LONGPRESS_MS);
+        if (read_button()) {
+            moist_limit = set_limit();
+        } else {
+            show_moist(MOIST_SHOW_MS - BUTTON_LONGPRESS_MS);
+        }
     }
-    display.write_num(moist % 10000);
-    display.refresh();
+
+    moist = read_moist(moist);
+    if (moist > moist_limit) {
+        /* TODO: start watering routine */
+    }
+
+    delay(SLEEP_MS);
 }
