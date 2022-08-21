@@ -7,6 +7,11 @@ int read_moist()
     return analogRead(PIN_MOIST);
 }
 
+int read_moist(int current)
+{
+    return (current + analogRead(PIN_MOIST)) / 2;
+}
+
 int read_pot()
 {
     digitalWrite(PIN_POT_PWR, HIGH);
