@@ -3,6 +3,7 @@
 #include "constants.hpp"
 #include "sense.hpp"
 #include "moist.hpp"
+#include "water.hpp"
 
 int moist;
 int moist_limit;
@@ -38,7 +39,7 @@ void loop()
 
     moist = read_moist(moist);
     if (moist > moist_limit) {
-        /* TODO: start watering routine */
+        water();
     }
 
     delay(SLEEP_MS);
