@@ -1,6 +1,6 @@
 #include "Arduino.h"
 #include "7seg.h"
-#include "pins.hpp"
+#include "constants.hpp"
 #include "sense.hpp"
 
 int moist;
