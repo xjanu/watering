@@ -20,6 +20,9 @@ const int MOIST_SHOW_MS = 3000;
 const int MOIST_REFRESH_MS = 500;
 const int LIMIT_REFRESH_MS = 50;
 
+const int WATER_ON_MS      = 5000;
+const int WATER_MIN_OFF_MS = 30 * 60000;
+
 // Initialization
 const int MOIST_LIMIT_INIT = 500;
 
