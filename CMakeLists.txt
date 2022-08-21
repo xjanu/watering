@@ -5,6 +5,7 @@ project(water CXX)
 list(APPEND WATER_SOURCES
     "src/main.cpp"
     "src/sense.cpp"
+    "src/moist.cpp"
     "deps/7seg/7seg.cpp"
 )
 
