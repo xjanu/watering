@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "7seg.h"
 #include "pins.hpp"
+#include "sense.hpp"
 
 int moist;
 
@@ -9,7 +10,7 @@ SegmentDisplay display{CATHODE, PINS_SEGMENT, PINS_DIGIT[0],
 
 void setup() {
     display.set_freq(DISPLAY_FREQ);
-    moist = analogRead(PIN_MOIST);
+    moist = read_moist();
 
     pinMode(PIN_PUMP, OUTPUT);
     pinMode(PIN_POT_PWR, OUTPUT);
@@ -21,7 +22,7 @@ void setup() {
 
 void loop() {
     if (millis() % 500 == 0) {
-        moist = (moist + analogRead(PIN_MOIST)) / 2;
+        moist = (moist + read_moist()) / 2;
     }
     display.write_num(moist % 10000);
     display.refresh();
