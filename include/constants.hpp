@@ -18,6 +18,7 @@ const int SLEEP_MS = 20;
 const int BUTTON_LONGPRESS_MS = 300;
 const int MOIST_SHOW_MS = 3000;
 const int MOIST_REFRESH_MS = 500;
+const int LIMIT_REFRESH_MS = 50;
 
 // Initialization
 const int MOIST_LIMIT_INIT = 500;

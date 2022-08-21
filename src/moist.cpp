@@ -9,7 +9,21 @@ extern SegmentDisplay display;
 
 int set_limit()
 {
-    // TODO
+    int new_limit = MOIST_LIMIT_INIT;
+
+    while (read_button());
+
+    for (int last_refresh = 0; !read_button();)
+    {
+        if (millis() - last_refresh > LIMIT_REFRESH_MS) {
+            new_limit = read_pot();
+            display.write_num(new_limit);
+            last_refresh = millis();
+        }
+        display.refresh();
+    }
+
+    return new_limit;
 }
 
 void show_moist(int time)
