@@ -3,6 +3,7 @@
 !/CMakeLists.txt
 !/BoardOptions.cmake
 !/README.md
+!/LICENSE.txt
 
 !/.vscode/
 !/deps/

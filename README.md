@@ -37,3 +37,8 @@ short while.
 The level-setting state is used to set the desired soil moisture level. The user
 can set the value using the potentiometer and confirm it by pressing the button.
 After the button is pressed, the state changes to default.
+
+License
+-------
+This software is licensed under the MIT License (MIT). For full license text,
+see the [LICENSE.txt](LICENSE.txt) file.
