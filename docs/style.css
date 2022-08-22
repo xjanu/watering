@@ -1,0 +1,33 @@
+div.header, .memtitle, .navpath ul, .sm-dox {
+    background-image: none;
+}
+
+.sm-dox {
+    background-color: #c8d2ff;
+}
+
+.navpath ul {
+    background-color: #e1e6ff;
+}
+
+#MSearchBox {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+div.contents {
+    width: 80ch;
+    margin: auto;
+    padding: 10px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+hr.footer {
+    flex-grow: 10;
+}
