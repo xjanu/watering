@@ -2,9 +2,15 @@
 !/.gitignore
 !/CMakeLists.txt
 !/BoardOptions.cmake
+!/README.md
 
 !/.vscode/
 !/deps/
 !/Arduino-CMake-Toolchain/
 !/src/
 !/include/
+
+!/docs
+/docs/*
+!/docs/Doxyfile
+!/docs/style.css
