@@ -1,15 +1,11 @@
-#include "Arduino.h"
-#include "7seg.h"
+#include "main.hpp"
 #include "constants.hpp"
 #include "sense.hpp"
 #include "moist.hpp"
 #include "water.hpp"
 
-int moist;
-int moist_limit;
-
-SegmentDisplay display{CATHODE, PINS_SEGMENT, PINS_DIGIT[0],
-                       PINS_DIGIT[1], PINS_DIGIT[2], PINS_DIGIT[3]};
+#include "7seg.h"
+#include <Arduino.h>
 
 void setup()
 {

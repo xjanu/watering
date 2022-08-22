@@ -1,8 +1,9 @@
-#include "Arduino.h"
 #include "moist.hpp"
 #include "sense.hpp"
 #include "constants.hpp"
+
 #include "7seg.h"
+#include <Arduino.h>
 
 extern int moist;
 extern SegmentDisplay display;
